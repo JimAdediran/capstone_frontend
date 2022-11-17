@@ -16,7 +16,7 @@ const ItemsPage = (props) => {
 
 const getAllContributions = async () => {
     try{
-        const response = await axios.get('http://127.0.0.1:8000/api/contribution/',
+        const response = await axios.get('https://cors-everywhere-me.herokuapp.com/http://capstonebackend-env.eba-kz2zadr9.us-east-1.elasticbeanstalk.com/api/contribution/',
         {headers: {Authorization: `Bearer ${token}`,},} 
         );
         setContributions(response.data)
