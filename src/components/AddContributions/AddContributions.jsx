@@ -14,7 +14,7 @@ const AddContributions = (props) => {
 
     const postNewContribution = async (newContribution) => {
         try{
-            const response = await axios.post("http://127.0.0.1:8000/api/contribution/", newContribution,
+            const response = await axios.post("https://cors-everywhere-me.herokuapp.com/http://capstonebackend-env.eba-kz2zadr9.us-east-1.elasticbeanstalk.com/api/contribution/", newContribution,
             {headers: {Authorization: `Bearer ${token}`,},} )
             console.log(response.data)
             props.getAllContributions()
